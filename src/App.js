@@ -43,16 +43,14 @@ class App extends Component {
   */
 
   shuffleImages = () => {
-    //let chappelles = this.state.chappelles;
-    let { chappelles } = this.state; // exact same thing as above
+    let { chappelles } = this.state;
 
     for (let i = chappelles.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [chappelles[i], chappelles[j]] = [chappelles[j], chappelles[i]];
     }
     
-    //this.setState({ chappelles: chappelles});
-    this.setState({ chappelles}); // exact same thing as above
+    this.setState({ chappelles});
 
   }
 
